@@ -35,6 +35,21 @@ class Book {
      *    that.title
      */
   }
+  //Book -> Boolean
+  // Returns true if this Book is published before the given Book
+  //TEMPLATE
+    /*    this.author
+     *    this.title
+     *    this.year
+     * 
+     *    that
+     *    that.author
+     *    that.title
+     *    that.year
+     */
+  boolean isPubBefore(Book that){
+    return this.year < that.year;
+  }
  
   
   // TODO design a function publishedBefore that accepts a Book and

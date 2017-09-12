@@ -26,4 +26,19 @@ public class ExamGradesTest extends TestCase {
     assertEquals(91.0, g.grades[9]);
   }
   
+  public void testHighestGrade() {
+    double grades[] = new double[20];
+    
+    for (int i = 0; i < 20; i++) {
+      grades[i] = 95.8  - i;
+    }
+    
+    ExamGrades f = new ExamGrades(grades);
+    
+    assertEquals(95.8, f.grades[0]);
+    assertEquals(85.8, f.grades[10]);
+    assertEquals(76.8, f.grades[19]);
+    
+    assertEquals(95.8, f.highestGrade());
+  }
 }
